@@ -1,0 +1,16 @@
+spring:
+  kafka:
+    bootstrap-servers: 192.168.253.128:9092
+    consumer:
+      group-id: group1
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserialize
+    producer:
+      batch-size: 16384
+      retries: 0
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      transaction-id-prefix: myKafkaTransact
