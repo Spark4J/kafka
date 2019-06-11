@@ -15,6 +15,9 @@ public class Partitioner01 implements Partitioner {
 	@Override
 	public int partition(String topic, Object key, byte[] keyBytes, Object value, byte[] valueBytes, Cluster cluster) {
 		// 控制分区
+		/*
+		可以添加判断 对某一类数据专门存放到指定分区
+		 */
 		return 1;
 	}
 

@@ -84,8 +84,7 @@ public class AckCommitTest {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KafkaConstant.BOOTSTRAP_SERVERS);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, KafkaConstant.GROUP_1);
-//		props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, true);
-        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);// 手动提交, 关闭自动提交
+        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);// 关闭自动提交, 改为手动提交
         props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "100");
         props.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, "15000");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, IntegerDeserializer.class);
